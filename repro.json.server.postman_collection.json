@@ -1,0 +1,111 @@
+{
+  "info": {
+    "name": "repro.json.server API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Mock API collection for repro.json.server"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"ava@example.com\",\n  \"password\": \"demo123\"\n}"
+        },
+        "url": "{{baseUrl}}/api/login"
+      }
+    },
+    {
+      "name": "Me",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/me"
+      }
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/logout"
+      }
+    },
+    {
+      "name": "Stats",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/stats"
+      }
+    },
+    {
+      "name": "Search",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/search?q=design"
+      }
+    },
+    {
+      "name": "User Tasks",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/users/2/tasks"
+      }
+    },
+    {
+      "name": "Project Members",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/projects/1/members"
+      }
+    },
+    {
+      "name": "Tasks (Delayed)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/tasks?delay=1200"
+      }
+    },
+    {
+      "name": "Projects (Fail)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/projects?fail=true"
+      }
+    }
+  ]
+}

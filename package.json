@@ -1,0 +1,36 @@
+{
+  "name": "json.server",
+  "version": "1.0.0",
+  "description": "Fake REST API for testing projects",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "set PORT=3100&& nodemon server.js",
+    "dev:3000": "set PORT=3000&& nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vranjan7077/repro.json.server.git"
+  },
+  "keywords": [
+    "fake",
+    "rest",
+    "api",
+    "testing",
+    "json-server",
+    "mock-api"
+  ],
+  "author": "Vinay Ranjan",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Vranjan7077/repro.json.server/issues"
+  },
+  "homepage": "https://github.com/Vranjan7077/repro.json.server#readme",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

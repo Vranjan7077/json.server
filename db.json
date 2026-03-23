@@ -1,0 +1,325 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ava Johnson",
+      "email": "ava@example.com",
+      "role": "admin",
+      "active": true,
+      "createdAt": "2026-01-01T08:00:00.000Z",
+      "updatedAt": "2026-01-10T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Liam Patel",
+      "email": "liam@example.com",
+      "role": "editor",
+      "active": true,
+      "createdAt": "2026-01-02T08:00:00.000Z",
+      "updatedAt": "2026-01-11T09:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Noah Kim",
+      "email": "noah@example.com",
+      "role": "viewer",
+      "active": false,
+      "createdAt": "2026-01-03T08:00:00.000Z",
+      "updatedAt": "2026-01-12T09:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Mia Chen",
+      "email": "mia@example.com",
+      "role": "editor",
+      "active": true,
+      "createdAt": "2026-01-04T08:00:00.000Z",
+      "updatedAt": "2026-01-13T09:00:00.000Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Website Redesign",
+      "ownerId": 1,
+      "status": "in-progress",
+      "budget": 12000,
+      "startDate": "2026-01-10",
+      "deadline": "2026-03-30",
+      "createdAt": "2026-01-10T10:00:00.000Z",
+      "updatedAt": "2026-02-12T09:15:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Mobile App MVP",
+      "ownerId": 2,
+      "status": "planned",
+      "budget": 18000,
+      "startDate": "2026-03-01",
+      "deadline": "2026-05-20",
+      "createdAt": "2026-01-15T10:00:00.000Z",
+      "updatedAt": "2026-02-11T08:10:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "API Refactor",
+      "ownerId": 1,
+      "status": "done",
+      "budget": 9000,
+      "startDate": "2025-11-01",
+      "deadline": "2026-01-31",
+      "createdAt": "2025-11-01T10:00:00.000Z",
+      "updatedAt": "2026-01-31T18:00:00.000Z"
+    }
+  ],
+  "projectMembers": [
+    {
+      "id": 1,
+      "projectId": 1,
+      "userId": 1,
+      "access": "owner",
+      "createdAt": "2026-01-10T10:30:00.000Z",
+      "updatedAt": "2026-01-10T10:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "projectId": 1,
+      "userId": 2,
+      "access": "editor",
+      "createdAt": "2026-01-10T11:00:00.000Z",
+      "updatedAt": "2026-01-10T11:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "projectId": 1,
+      "userId": 4,
+      "access": "editor",
+      "createdAt": "2026-01-11T11:00:00.000Z",
+      "updatedAt": "2026-01-11T11:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "projectId": 2,
+      "userId": 2,
+      "access": "owner",
+      "createdAt": "2026-01-15T12:00:00.000Z",
+      "updatedAt": "2026-01-15T12:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "projectId": 3,
+      "userId": 1,
+      "access": "owner",
+      "createdAt": "2025-11-01T09:00:00.000Z",
+      "updatedAt": "2025-11-01T09:00:00.000Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "projectId": 1,
+      "assigneeId": 2,
+      "title": "Create wireframes",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-01-20",
+      "createdAt": "2026-01-10T12:00:00.000Z",
+      "updatedAt": "2026-01-20T18:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "projectId": 1,
+      "assigneeId": 4,
+      "title": "Build landing page",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-02-28",
+      "createdAt": "2026-01-12T09:00:00.000Z",
+      "updatedAt": "2026-02-15T15:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "projectId": 2,
+      "assigneeId": 2,
+      "title": "Define auth flow",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-03-15",
+      "createdAt": "2026-02-01T09:00:00.000Z",
+      "updatedAt": "2026-02-01T09:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "projectId": 3,
+      "assigneeId": 1,
+      "title": "Add integration tests",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-01-25",
+      "createdAt": "2025-12-10T10:00:00.000Z",
+      "updatedAt": "2026-01-24T17:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "projectId": 1,
+      "assigneeId": 2,
+      "title": "Accessibility review",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-03-05",
+      "createdAt": "2026-02-18T10:00:00.000Z",
+      "updatedAt": "2026-02-18T10:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "projectId": 2,
+      "assigneeId": 4,
+      "title": "Push notification POC",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-03-20",
+      "createdAt": "2026-02-19T10:00:00.000Z",
+      "updatedAt": "2026-02-19T10:00:00.000Z"
+    }
+  ],
+  "taskComments": [
+    {
+      "id": 1,
+      "taskId": 2,
+      "userId": 4,
+      "body": "Homepage hero section is ready for review.",
+      "createdAt": "2026-02-14T13:00:00.000Z",
+      "updatedAt": "2026-02-14T13:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "taskId": 3,
+      "userId": 2,
+      "body": "Need decision on social login providers.",
+      "createdAt": "2026-02-20T09:00:00.000Z",
+      "updatedAt": "2026-02-20T09:00:00.000Z"
+    }
+  ],
+  "attachments": [
+    {
+      "id": 1,
+      "taskId": 1,
+      "fileName": "wireframes-v2.pdf",
+      "url": "https://example.com/files/wireframes-v2.pdf",
+      "sizeKb": 820,
+      "createdAt": "2026-01-18T10:00:00.000Z",
+      "updatedAt": "2026-01-18T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "taskId": 2,
+      "fileName": "landing-page-assets.zip",
+      "url": "https://example.com/files/landing-page-assets.zip",
+      "sizeKb": 1540,
+      "createdAt": "2026-02-16T10:00:00.000Z",
+      "updatedAt": "2026-02-16T10:00:00.000Z"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "frontend",
+      "color": "#1d4ed8",
+      "createdAt": "2026-01-01T09:00:00.000Z",
+      "updatedAt": "2026-01-01T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "backend",
+      "color": "#047857",
+      "createdAt": "2026-01-01T09:00:00.000Z",
+      "updatedAt": "2026-01-01T09:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "design",
+      "color": "#b45309",
+      "createdAt": "2026-01-01T09:00:00.000Z",
+      "updatedAt": "2026-01-01T09:00:00.000Z"
+    }
+  ],
+  "taskTags": [
+    {
+      "id": 1,
+      "taskId": 1,
+      "tagId": 3,
+      "createdAt": "2026-01-10T12:10:00.000Z",
+      "updatedAt": "2026-01-10T12:10:00.000Z"
+    },
+    {
+      "id": 2,
+      "taskId": 2,
+      "tagId": 1,
+      "createdAt": "2026-01-12T09:10:00.000Z",
+      "updatedAt": "2026-01-12T09:10:00.000Z"
+    },
+    {
+      "id": 3,
+      "taskId": 3,
+      "tagId": 2,
+      "createdAt": "2026-02-01T09:10:00.000Z",
+      "updatedAt": "2026-02-01T09:10:00.000Z"
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": 1,
+      "actorUserId": 1,
+      "entityType": "project",
+      "entityId": 1,
+      "action": "created",
+      "message": "Project Website Redesign created",
+      "createdAt": "2026-01-10T10:00:00.000Z",
+      "updatedAt": "2026-01-10T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "actorUserId": 2,
+      "entityType": "task",
+      "entityId": 1,
+      "action": "completed",
+      "message": "Task Create wireframes marked done",
+      "createdAt": "2026-01-20T18:00:00.000Z",
+      "updatedAt": "2026-01-20T18:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "actorUserId": 4,
+      "entityType": "task",
+      "entityId": 2,
+      "action": "commented",
+      "message": "Homepage hero section is ready for review",
+      "createdAt": "2026-02-14T13:00:00.000Z",
+      "updatedAt": "2026-02-14T13:00:00.000Z"
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Kickoff",
+      "body": "Confirm scope and timeline.",
+      "createdAt": "2026-01-09T10:00:00.000Z",
+      "updatedAt": "2026-01-09T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "Auth",
+      "body": "Use email and OTP for first release.",
+      "createdAt": "2026-02-01T10:00:00.000Z",
+      "updatedAt": "2026-02-01T10:00:00.000Z"
+    }
+  ],
+  "meta": {
+    "apiName": "repro.json.server",
+    "version": "2.0.0",
+    "seed": "project-management-extended",
+    "generatedAt": "2026-02-22T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Json Server</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --brand: #0f766e;
+        --brand-soft: #ccfbf1;
+        --border: #e5e7eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text);
+        background: radial-gradient(
+          circle at top right,
+          #d1fae5 0%,
+          var(--bg) 45%
+        );
+      }
+
+      .wrap {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 16px;
+      }
+
+      .hero {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 24px;
+        margin-bottom: 16px;
+      }
+
+      .badge {
+        display: inline-block;
+        background: var(--brand-soft);
+        color: #134e4a;
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 28px;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .success {
+        margin-top: 12px;
+        color: #0f766e;
+        font-weight: 600;
+        line-height: 1.6;
+        white-space: pre-line;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 12px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      .card h2 {
+        margin: 0 0 8px;
+        font-size: 16px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      a {
+        color: var(--brand);
+        text-decoration: none;
+        font-family: Consolas, Menlo, Monaco, monospace;
+        font-size: 13px;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      code {
+        background: #f3f4f6;
+        padding: 2px 6px;
+        border-radius: 6px;
+        font-family: Consolas, monospace;
+        border: 1px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <span class="badge">Mock API</span>
+        <h1>Json Server</h1>
+        <p>
+          Custom landing page for your JSON Server. Use links below to test
+          endpoints quickly.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Health & Utility</h2>
+          <ul>
+            <li><a href="/health">GET /health</a></li>
+            <li><a href="/api/stats">GET /api/stats</a></li>
+            <li><a href="/api/search?q=design">GET /api/search?q=design</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Core Data</h2>
+          <ul>
+            <li><a href="/api/users">GET /api/users</a></li>
+            <li><a href="/api/projects">GET /api/projects</a></li>
+            <li><a href="/api/tasks">GET /api/tasks</a></li>
+            <li><a href="/api/projectMembers">GET /api/projectMembers</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Route Shortcuts</h2>
+          <ul>
+            <li><a href="/api/users/2/tasks">GET /api/users/2/tasks</a></li>
+            <li>
+              <a href="/api/projects/1/tasks">GET /api/projects/1/tasks</a>
+            </li>
+            <li>
+              <a href="/api/projects/1/members">GET /api/projects/1/members</a>
+            </li>
+            <li><a href="/api/dashboard">GET /api/dashboard</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Simulation</h2>
+          <ul>
+            <li>
+              <a href="/api/tasks?delay=1200">GET /api/tasks?delay=1200</a>
+            </li>
+            <li>
+              <a href="/api/projects?fail=true">GET /api/projects?fail=true</a>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <p class="footer">
+        Tip: import <code>repro.json.server.postman_collection.json</code> for
+        full API testing.
+      </p>
+      <p class="footer">
+        Made with ❤️ by
+        <a href="https://vranjan.dev/" target="_blank" rel="noopener"
+          >Vinay Ranjan</a
+        >.
+      </p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "/api/*": "/$1",
+  "/users/:id/tasks": "/tasks?assigneeId=:id",
+  "/projects/:id/tasks": "/tasks?projectId=:id",
+  "/projects/:id/members": "/projectMembers?projectId=:id",
+  "/dashboard": "/stats"
+}
