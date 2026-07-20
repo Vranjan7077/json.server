@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "set PORT=3100&& nodemon server.js",
-    "dev:3000": "set PORT=3000&& nodemon server.js"
+    "dev:3000": "set PORT=3000&& nodemon server.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,12 @@
   },
   "homepage": "https://github.com/Vranjan7077/repro.json.server#readme",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "json-server": "^0.17.4"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "jest": "^30.4.2",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.2.2"
   }
 }

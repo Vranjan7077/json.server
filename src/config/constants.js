@@ -1,3 +1,5 @@
+require("dotenv").config({ quiet: true });
+
 const PORT = Number(process.env.PORT) || 3000;
 const MOCK_LOGIN_PASSWORD = process.env.MOCK_LOGIN_PASSWORD || "demo123";
 const TOKEN_TTL_SECONDS = 3600;

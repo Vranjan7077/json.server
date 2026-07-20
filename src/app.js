@@ -9,13 +9,15 @@ const { withTimestamps } = require("./middleware/withTimestamps");
 const { createValidatePayload } = require("./middleware/validatePayload");
 const { registerCustomRoutes } = require("./routes/customRoutes");
 
-function createApp() {
+function createApp(options = {}) {
   const rootDir = path.join(__dirname, "..");
 
+  const dbSource = options.dbSource || path.join(rootDir, "db.json");
+  const routes = options.routes || require(path.join(rootDir, "routes.json"));
+
   const server = jsonServer.create();
-  const router = jsonServer.router(path.join(rootDir, "db.json"));
+  const router = jsonServer.router(dbSource);
   const middlewares = jsonServer.defaults();
-  const routes = require(path.join(rootDir, "routes.json"));
   const rewriter = jsonServer.rewriter(routes);
 
   const sessionService = createSessionService(TOKEN_TTL_SECONDS);
@@ -35,7 +37,8 @@ function createApp() {
 
   return {
     server,
-    port: PORT,
+    router,
+    port: options.port || PORT,
   };
 }
 
